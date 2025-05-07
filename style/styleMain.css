@@ -21,6 +21,7 @@ a :hover {
   flex-direction: column;
  color: #fff;
  text-shadow: #000000 2px 2px 2px;
+ align-items: center;
 }
 
 .logo-header:hover {
@@ -58,7 +59,11 @@ main {
   background-position: center center;
   background-size: cover;
   height: 92vh;
+
+ 
 }
+
+
 
 .nav-list {
   list-style: none;
