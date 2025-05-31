@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil | Pak Bet</title>
+    <link rel="stylesheet" href="../style/user.css" />
+    <link rel="stylesheet" href="../style/styleComponents.css" />
+    <link rel="stylesheet" href="../style/styleMain.css" />
+  </head>
+  <body>
+    <header-component></header-component>
+    <main class="perfil-main">
+      <h1 class="perfil-title">PERFIL</h1>
+      <div class="perfil-container">
+        <div class="perfil-card">
+          <div class="perfil-user">
+            <div class="perfil-avatar">
+              <img src="../images/avatar-placeholder.png" alt="Avatar" />
+            </div>
+            <div class="perfil-info">
+              <span class="perfil-user-label">Usuário: <b>@pakbet</b></span><br>
+              <span class="perfil-email-label">E-mail: fulano@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="perfil-saldo">
+          <span>Saldo:</span>
+          <span class="saldo-box">R$50,00 <img src="../images/coin.png" alt="coin" class="coin-icon"></span>
+        </div>
+        <div class="perfil-jogados">
+          <span class="jogados-title">Jogados recentemente:</span>
+          <div class="jogados-list">
+            <img src="../images/crashgame.png" alt="Crash Game">
+            <img src="../images/marblerace.png" alt="Marble Race">
+            <img src="../images/luckywheel.png" alt="Lucky Wheel">
+            <img src="../images/bomb.png" alt="Bomb">
+          </div>
+        </div>
+        <div class="perfil-historico">
+          <span class="historico-title">Histórico de transmissão:</span>
+          <div class="historico-card">
+            <img src="../images/poker-stream.png" alt="Poker Stream">
+            <div class="historico-desc">
+              <span class="historico-label">NOITE DE POKER NA PAKBET! CHAMA A GALERA</span>
+              <span class="historico-user">@pakbet</span>
+            </div>
+            <div class="play-btn">&#9658;</div>
+          </div>
+        </div>
+      </div>
+      <div class="perfil-add add-left">ADD</div>
+      <div class="perfil-add add-right">ADD</div>
+    </main>
+    <footer-component></footer-component>
+    <script src="../components/footer.js" defer></script>
+    <script src="../components/header.js" defer></script>
+  </body>
+</html>

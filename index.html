@@ -3,19 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teste</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <title>Pak Bet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="style/styleMain.css" />
     <link rel="stylesheet" href="style/styleComponents.css" />
   </head>
-
   <body>
-
-  <!-- /* Header component */ --> 
-<header-component></header-component>
+    <header-component></header-component>
 
     <main>
-
+      <!-- Carrossel -->
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="5000">
@@ -37,14 +34,63 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+
+      <!-- Seção: Os mais jogados pela galera -->
+      <section class="most-played">
+        <h2>Os mais jogados pela galera</h2>
+        <div class="games">
+          <img src="./images/zecarioca-slotgame.png" alt="Game 1">
+          <img src="./images/zecarioca-slotgame.png" alt="Game 2">
+        </div>
+      </section>
+
+      <!-- Seção: Maiores premiações -->
+      <section class="top-prizes">
+        <h2>Maiores premiações</h2>
+        <div class="prizes">
+          <div class="prize">
+            <img src="./images/3106921.png" alt="Prêmio 1">
+            <p>2º Lugar</p>
+            <div class="retangulo">
+              <p>R$1.000,00</p>
+            </div>
+          </div>
+          <div class="prize">
+            <img src="./images/3106921.png" alt="Prêmio 2">
+            <p>1º Lugar</p>
+            <div class="retangulo1"><p>R$10.000,00</p></div>
+          </div>
+          <div class="prize">
+            <img src="./images/3106921.png" alt="Prêmio 3">
+            <p>3º Lugar</p>
+            <div class="retangulo">
+              <p>R$100,0</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção: Acompanhe a galera jogando -->
+      <section class="watch-gaming">
+        <h2>Acompanhe a galera jogando</h2>
+        <div class="stream">
+          <div class="stream-item">
+            <img src="./images/zecarioca-slotgame.png" alt="stream 1">
+            <p>Hoje é dia de Poker! | 900</p>
+          </div>
+          <div class="stream-item">
+            <img src="./images/zecarioca-slotgame.png" alt="stream 2">
+            <p>Hoje é dia de Poker! | 1,8K</p>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- /* Footer component */ -->
-   <footer-component></footer-component>
+    <footer-component></footer-component>
 
     <script src="./components/footer.js" type="text/javascript" defer></script>
     <script src="./script/navbar.js"></script>
     <script src="./components/header.js" type="text/javascript" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>

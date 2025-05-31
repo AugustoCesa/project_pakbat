@@ -1,0 +1,273 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1b8c3b 0%, #217821 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+main.perfil-main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 40px;
+  min-height: 80vh;
+}
+
+.perfil-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 32px 0 24px 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.perfil-container {
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 32px 24px 24px 24px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.perfil-card {
+  background: #ffc107;
+  border-radius: 10px;
+  padding: 18px 18px 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid #fff;
+  margin-bottom: 8px;
+}
+
+.perfil-user {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.perfil-avatar img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+.perfil-info {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.perfil-user-label {
+  color: #fff;
+}
+
+.perfil-email-label {
+  color: #fff;
+  font-weight: normal;
+}
+
+.perfil-saldo {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.saldo-box {
+  background: #fff;
+  color: #217821;
+  border-radius: 8px;
+  padding: 4px 14px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1.5px solid #217821;
+}
+
+.coin-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+}
+
+.perfil-jogados {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 12px 10px 10px 10px;
+  background: rgba(255,255,255,0.03);
+  margin-bottom: 8px;
+}
+
+.jogados-title {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.jogados-list {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.jogados-list img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 1.5px solid #217821;
+}
+
+.perfil-historico {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 12px 10px 10px 10px;
+  background: rgba(255,255,255,0.03);
+}
+
+.historico-title {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.historico-card {
+  margin-top: 8px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.historico-card img {
+  width: 140px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.historico-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.historico-label {
+  color: #217821;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.historico-user {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.play-btn {
+  position: absolute;
+  left: 60px;
+  top: 30px;
+  font-size: 2.2rem;
+  color: #217821;
+  opacity: 0.85;
+  pointer-events: none;
+  text-shadow: 0 2px 8px #fff, 0 0 2px #217821;
+}
+
+.perfil-add {
+  position: absolute;
+  top: 180px;
+  width: 120px;
+  height: 280px;
+  background: #b7b7b7a8;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  writing-mode: vertical-lr;
+  text-align: center;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  user-select: none;
+}
+
+.add-left {
+  left: 40px;
+}
+
+.add-right {
+  right: 40px;
+}
+
+@media (max-width: 900px) {
+  .perfil-container {
+    max-width: 98vw;
+    padding: 18px 2vw 12px 2vw;
+  }
+  .perfil-add {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .perfil-title {
+    font-size: 1.2rem;
+    margin: 18px 0 12px 0;
+  }
+  .perfil-container {
+    padding: 10px 2vw 8px 2vw;
+  }
+  .perfil-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 10px 8px 10px;
+  }
+  .jogados-list img {
+    width: 70px;
+    height: 44px;
+  }
+  .historico-card img {
+    width: 90px;
+    height: 50px;
+  }
+  .play-btn {
+    left: 32px;
+    top: 14px;
+    font-size: 1.3rem;
+  }
+}

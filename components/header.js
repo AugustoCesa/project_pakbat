@@ -11,7 +11,7 @@ class Header extends HTMLElement {
 <header>
     <nav>
       <div  class="logo-header">
-      <a href="/"><img src="/images/LOGO.png" alt=""></img></a>
+      <a href="./pages/login.html"><img src="/images/LOGO.png" alt=""></img></a>
       <h3>Pak Bet</h3>
        </div>
       <div class="mobile-menu">
@@ -33,6 +33,7 @@ class Header extends HTMLElement {
       `;
   }
 }
+
 
 customElements.define('header-component', Header);
 

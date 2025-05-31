@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
 
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #181818;
+}
+
 * {
   margin: 0;
-  /* Remove o espaçamento padrão */
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -11,39 +23,33 @@ a {
   text-decoration: none;
 }
 
-a :hover {
+a:hover {
   opacity: 0.9;
-  /* Efeito de opacidade ao passar o mouse */
 }
 
 .logo-header {
   display: flex;
   flex-direction: column;
- color: #fff;
- text-shadow: #000000 2px 2px 2px;
- align-items: center;
+  color: #fff;
+  text-shadow: #000000 2px 2px 2px;
+  align-items: center;
 }
 
 .logo-header:hover {
   opacity: 0.9;
 }
 
-.logo-header img{
-height: 60px;
-width: 70px
+.logo-header img {
+  height: 60px;
+  width: 70px;
 }
 
 nav {
   position: fixed;
-  /* Torna o nav fixo no topo */
   top: 0;
-  /* Posiciona no topo da página */
   left: 0;
-  /* Alinha à esquerda */
   width: 100%;
-  /* Faz o nav ocupar toda a largura */
   z-index: 1000;
-  /* Garante que o nav fique acima de outros elementos */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -51,6 +57,7 @@ nav {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-image: url("/images/fundo-header.png");
   height: 12vh;
+  
 }
 
 main {
@@ -58,12 +65,10 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 92vh;
-
- 
+  height: auto;
+  padding-bottom: 50px;
+  flex: 1 0 auto;
 }
-
-
 
 .nav-list {
   list-style: none;
@@ -74,9 +79,9 @@ main {
   letter-spacing: 3px;
   margin-left: 20px;
   text-decoration: underline 3px solid;
-    text-decoration-color: #fff;
-    font-weight: bold;
-    text-shadow: #7f7c7c 2px 2px 2px;
+  text-decoration-color: #fff;
+  font-weight: bold;
+  text-shadow: #7f7c7c 2px 2px 2px;
 }
 
 .nav-list li a:hover {
@@ -158,13 +163,17 @@ main {
 }
 
 /* Footer Styles */
-footer {
+footer, footer-component {
   background-image: url("/images/fundo-header.png");
   color: #fff;
   padding: 20px 0;
   text-align: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;
 }
 
 .footer-container {
@@ -177,8 +186,8 @@ footer {
   align-items: center;
 }
 
-.footer-logo{
-  text-shadow: #000000 2px 2px 2px; 
+.footer-logo {
+  text-shadow: #000000 2px 2px 2px;
 }
 
 .footer-links {
@@ -211,9 +220,6 @@ footer {
   text-decoration: underline;
 }
 
-
-
-/* Responsividade */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -227,5 +233,142 @@ footer {
 
   .footer-social {
     margin-top: 10px;
+  }
+}
+
+/* Seção: Os mais jogados pela galera */
+.most-played {
+  text-align: center;
+  margin: 50px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.most-played h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.most-played .games {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.most-played .games img {
+  width: 275px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção: Maiores premiações */
+.top-prizes {
+  text-align: center;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-prizes h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.top-prizes .prizes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.top-prizes .prize {
+  text-align: center;
+}
+
+.top-prizes .prize img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-prizes .prize p {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.retangulo {
+  width: 100px;
+  height: 150px;
+  background-color: darkgoldenrod;
+  margin-top: 42px;
+}
+
+.retangulo1 {
+  width: 100px;
+  height: 175px;
+  background-color: darkgoldenrod;
+}
+
+/* Seção: Acompanhe a galera jogando */
+.watch-gaming {
+  text-align: center;
+  margin: 50px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.watch-gaming h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  margin-bottom: 30px;
+}
+
+.watch-gaming .stream {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.watch-gaming .stream img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stream-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .most-played .games img,
+  .watch-gaming .stream img {
+    width: 100px;
+  }
+  .top-prizes .prize img {
+    width: 60px;
+  }
+  .retangulo, .retangulo1 {
+    width: 60px;
+    font-size: 0.8rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
   }
 }
