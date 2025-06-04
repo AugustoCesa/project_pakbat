@@ -1,12 +1,12 @@
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background: linear-gradient(135deg, #1b8c3b 0%, #217821 100%);
   font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-main.perfil-main {
+.perfil-main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
@@ -18,36 +18,38 @@ main.perfil-main {
 
 .perfil-title {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  margin: 32px 0 24px 0;
+  margin: 40px 0 28px 0;
   text-align: center;
   letter-spacing: 1px;
+  margin-top: 150px;
 }
 
 .perfil-container {
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.07);
   border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  padding: 32px 24px 24px 24px;
-  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  padding: 40px 36px 32px 36px;
+  max-width: 60vw;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 28px;
   position: relative;
   z-index: 2;
+  margin-bottom: 32px;
 }
 
 .perfil-card {
-  background: #ffc107;
-  border-radius: 10px;
-  padding: 18px 18px 12px 18px;
+  background: #e5ad04;
+  border-radius: 12px;
+  padding: 22px 22px 16px 22px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   border: 2px solid #fff;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .perfil-user {
@@ -57,16 +59,16 @@ main.perfil-main {
 }
 
 .perfil-avatar img {
-  width: 56px;
-  height: 56px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: #fff;
-  border: 2px solid #fff;
+  background: #d8d8d8;
+  border: 2px solid #000000;
 }
 
 .perfil-info {
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: bold;
 }
 
@@ -81,45 +83,45 @@ main.perfil-main {
 
 .perfil-saldo {
   margin-bottom: 8px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #fff;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .saldo-box {
   background: #fff;
   color: #217821;
-  border-radius: 8px;
-  padding: 4px 14px;
+  border-radius: 10px;
+  padding: 6px 18px;
   font-weight: bold;
-  font-size: 1.1rem;
-  margin-left: 6px;
+  font-size: 1.2rem;
+  margin-left: 8px;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  border: 1.5px solid #217821;
+  gap: 6px;
+  border: 2px solid #000000;
 }
 
 .coin-icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-left: 2px;
 }
 
 .perfil-jogados {
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 10px;
-  padding: 12px 10px 10px 10px;
+  padding: 16px 12px 12px 12px;
   background: rgba(255,255,255,0.03);
   margin-bottom: 8px;
 }
 
 .jogados-title {
   color: #fff;
-  font-size: 1.05rem;
+  font-size: 1.30rem;
   font-weight: bold;
   margin-bottom: 8px;
   display: block;
@@ -127,31 +129,34 @@ main.perfil-main {
 
 .jogados-list {
   display: flex;
-  gap: 12px;
+  gap: 18px;
   margin-top: 8px;
   flex-wrap: wrap;
 }
 
 .jogados-list img {
-  width: 90px;
-  height: 60px;
+  width: 180px;
+  height: auto;
   object-fit: cover;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  border: 1.5px solid #217821;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  border: 2px solid #217821;
+  transition: transform 0.15s;
+}
+.jogados-list img:hover {
+  transform: scale(1.04);
 }
 
 .perfil-historico {
   border: 2px solid #fff;
   border-radius: 10px;
-  padding: 12px 10px 10px 10px;
+  padding: 16px 12px 12px 12px;
   background: rgba(255,255,255,0.03);
 }
 
 .historico-title {
   color: #fff;
-  font-size: 1.05rem;
+  font-size: 1.30rem;
   font-weight: bold;
   margin-bottom: 8px;
   display: block;
@@ -159,21 +164,23 @@ main.perfil-main {
 
 .historico-card {
   margin-top: 8px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 10px 10px 10px 10px;
+  background: #217821;
+  border-radius: 12px;
+  padding: 16px 16px 16px 16px;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
   position: relative;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
 }
 
 .historico-card img {
-  width: 140px;
-  height: 80px;
+  width: 210px;
+  height: auto;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px solid #217821;
 }
 
 .historico-desc {
@@ -183,22 +190,22 @@ main.perfil-main {
 }
 
 .historico-label {
-  color: #217821;
+  color: #fff;
   font-weight: bold;
   font-size: 1rem;
 }
 
 .historico-user {
-  color: #888;
-  font-size: 0.95rem;
+  color: #ffe066;
+  font-size: 0.98rem;
 }
 
 .play-btn {
   position: absolute;
-  left: 60px;
-  top: 30px;
+  left: 80px;
+  top: 40px;
   font-size: 2.2rem;
-  color: #217821;
+  color: #ffe066;
   opacity: 0.85;
   pointer-events: none;
   text-shadow: 0 2px 8px #fff, 0 0 2px #217821;
@@ -206,14 +213,14 @@ main.perfil-main {
 
 .perfil-add {
   position: absolute;
-  top: 180px;
-  width: 120px;
-  height: 280px;
+  top: 380px;
+  width: 200px;
+  height: 400px;
   background: #b7b7b7a8;
   color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,23 +240,29 @@ main.perfil-main {
   right: 40px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .perfil-container {
-    max-width: 98vw;
-    padding: 18px 2vw 12px 2vw;
+    max-width: 90vw;
+    padding: 24px 2vw 18px 2vw;
   }
   .perfil-add {
     display: none;
   }
+  .jogados-list img, .historico-card img {
+    width: 130px;
+    height: auto;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .perfil-title {
     font-size: 1.2rem;
     margin: 18px 0 12px 0;
+    margin-top: 100px;
   }
   .perfil-container {
     padding: 10px 2vw 8px 2vw;
+    gap: 14px;
   }
   .perfil-card {
     flex-direction: column;
@@ -257,17 +270,13 @@ main.perfil-main {
     gap: 10px;
     padding: 10px 10px 8px 10px;
   }
-  .jogados-list img {
-    width: 70px;
-    height: 44px;
-  }
-  .historico-card img {
-    width: 90px;
-    height: 50px;
+  .jogados-list img, .historico-card img {
+    width: 110px;
+    height: auto;
   }
   .play-btn {
-    left: 32px;
-    top: 14px;
-    font-size: 1.3rem;
+    left: 18px;
+    top: 8px;
+    font-size: 1.1rem;
   }
 }
