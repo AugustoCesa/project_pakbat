@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Pak Bet</title>
     <link rel="stylesheet" href="../style/styleLogin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
     <main>
+      <div class="logo">
+        <img src="../images/ZéCariocaLogoLogin.png" alt="Pak Bet" />
+        <h1>PAK BET</h1>
+      </div>
       <div class="Login">
-        <div class="logo">
-          <img src="../images/ZéCariocaLogoLogin.png" alt="Pak Bet" />
-          <h1>PAK BET</h1>
-        </div>
         <h2>Entrar na sua conta</h2>
         <form>
           <label for="email">E-mail</label>
@@ -31,11 +35,17 @@
             required
             autocomplete="current-password"
           />
-          <button type="submit">Entrar</button>
+          <button type="submit">Login</button>
         </form>
+        <div class="divider"><span>ou</span></div>
+        <div class="social-login">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+        </div>
         <div class="login-links">
-          <a href="#">Esqueceu a senha?</a>
-          <a href="#">Criar conta</a>
+          <a href="#">Não possui uma conta? Cadastre-se!</a>
         </div>
       </div>
     </main>
