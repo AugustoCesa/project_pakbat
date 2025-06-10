@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depósito | Pak Bet</title>
+    <link rel="stylesheet" href="../style/styleDeposito.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  </head>
+  <body>
+
+    <header class="navbar">
+      <div>
+        <i class="bi bi-arrow-down-circle"></i>
+        <h1 class="titulo">DEPOSITAR</h1>
+      </div>
+    </header>
+    
+    <div class="container mt-4">
+      <div class="row">
+
+        <div class="col-md-2 d-none d-md-block">
+          <div class="ad-box">Anúncio 1</div>
+        </div>
+
+        <div class="col-12 col-md-8">
+            <div class="deposito-box">
+              <h4 class="mb-4">Escolha o valor e método de depósito</h4>
+              
+              <form>
+                <div class="mb-3">
+                  <label for="valor" class="form-label">Valor (R$)</label>
+                  <input type="number" class="form-control" id="valor" placeholder="Ex: 100.00" min="10" step="0.01" required>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="metodo" class="form-label">Método de Pagamento</label>
+                  <select class="form-select" id="metodo" required>
+                    <option value="">Selecione...</option>
+                    <option value="pix">PIX</option>
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                  </select>
+                </div>
+  
+                <div class="d-grid mt-4">
+                  <button type="submit" class="btn btn-confirmar" id="btn-confirmar">
+                    <i class="bi bi-wallet2"></i> Confirmar Depósito
+                  </button>
+                </div>
+
+              </form>
+            </div>
+        </div>
+         
+        <div class="col-md-2 d-none d-md-block">
+          <div class="ad-box">Anúncio 2</div>
+        </div>
+          
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+  </body>
+</html>
