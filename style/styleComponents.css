@@ -1,16 +1,16 @@
 #carouselExampleInterval {
-    max-width: 800px; /* Define a largura máxima */
-    max-height: 500px; /* Define a altura máxima */
+    max-width: 1000px; /* Define a largura máxima */
+    max-height: auto; /* Define a altura máxima */
     margin: 0 auto; /* Centraliza o carrossel */
     overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */;
-    margin-top: 97px;
+    margin-top: 150px;
   }
   
   #carouselExampleInterval img {
     width: 100%; /* Faz as imagens ocuparem toda a largura do carrossel */
     height: auto; /* Mantém a proporção das imagens */
-    max-height: 500px;
-    max-width: 800px;
+    max-height: 100%; /* Define a altura máxima */
+    max-width: 100%; /* Define a largura máxima */
     object-fit: cover; /* Ajusta o conteúdo da imagem para preencher o espaço */
     z-index: 1
   }

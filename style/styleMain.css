@@ -27,6 +27,7 @@ a:hover {
   opacity: 0.9;
 }
 
+/* HEADER */
 .logo-header {
   display: flex;
   flex-direction: column;
@@ -40,8 +41,8 @@ a:hover {
 }
 
 .logo-header img {
-  height: 60px;
-  width: 70px;
+  height: auto;
+  width: 90px;
 }
 
 nav {
@@ -56,8 +57,7 @@ nav {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-image: url("/images/fundo-header.png");
-  height: 12vh;
-  
+  height: 15vh;
 }
 
 main {
@@ -70,6 +70,15 @@ main {
   flex: 1 0 auto;
 }
 
+/* Linha divisória */
+.linha {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+/* NAVIGATION */
 .nav-list {
   list-style: none;
   display: flex;
@@ -131,6 +140,7 @@ main {
 
   .mobile-menu {
     display: block;
+    z-index: 1001;
   }
 
   .nav-list.active {
@@ -142,7 +152,6 @@ main {
       opacity: 0;
       transform: translateX(50px);
     }
-
     to {
       opacity: 1;
       transform: translateX(0);
@@ -152,17 +161,15 @@ main {
   .mobile-menu.active div:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
-
   .mobile-menu.active div:nth-child(2) {
     opacity: 0;
   }
-
   .mobile-menu.active div:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 
-/* Footer Styles */
+/* FOOTER */
 footer, footer-component {
   background-image: url("/images/fundo-header.png");
   color: #fff;
@@ -172,7 +179,6 @@ footer, footer-component {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
   margin-top: auto;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
   flex-shrink: 0;
 }
 
@@ -225,147 +231,246 @@ footer, footer-component {
     flex-direction: column;
     text-align: center;
   }
-
   .footer-links {
     justify-content: center;
     margin: 10px 0;
   }
-
   .footer-social {
     margin-top: 10px;
   }
 }
 
-/* Seção: Os mais jogados pela galera */
-.most-played {
-  text-align: center;
-  margin: 50px 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+/* Seções decoradas */
+.decorated-section {
+  margin: 48px auto 32px auto;
+  background: rgba(0,0,0,0.13);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px #0002;
+  padding: 32px 24px 24px 24px;
+  max-width: 1100px;
+  width: 95vw;
+  position: relative;
+  overflow: hidden;
 }
 
-.most-played h2 {
-  font-size: 2rem;
+.decorated-section h2 {
   color: #fff;
-  text-shadow: 2px 2px 2px #000;
-}
-
-.most-played .games {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.most-played .games img {
-  width: 275px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Seção: Maiores premiações */
-.top-prizes {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 32px;
   text-align: center;
-  margin: 50px 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px #0006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Grid de jogos */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  justify-items: center;
+}
+
+.game-card {
+  background: rgba(255,255,255,0.13);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #0002;
+  padding: 18px 12px 12px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  border: 2px solid #ffffff33;
+  min-width: 280px;
+  max-width: 340px;
+  height: auto;
 }
 
-.top-prizes h2 {
-  font-size: 2rem;
+.game-card img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.game-card span {
   color: #fff;
-  text-shadow: 2px 2px 2px #000;
-}
-
-.top-prizes .prizes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.top-prizes .prize {
+  font-weight: bold;
+  font-size: 1.1rem;
   text-align: center;
 }
 
-.top-prizes .prize img {
-  width: 100px;
-  height: auto;
+.game-card:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 8px 32px #efb60055;
+  border-color: #efb600;
+}
+
+/* Grid de prêmios */
+.prizes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.prize-card {
+  background: #eacc08;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0002;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+  position: relative;
+  border: 3px solid #efb60033;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.prize-card.first {
+  border: 3px solid gold;
+  transform: scale(1.08);
+  z-index: 1;
+  box-shadow: 0 8px 32px #efb60055;
+}
+
+.prize-card img {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px;
+  border: 2px solid #050505;
+  background: #ffffff;
 }
 
-.top-prizes .prize p {
-  color: #fff;
+.prize-card p {
+  color: #000000;
   font-weight: bold;
-  margin-top: 10px;
+  margin: 8px 0 4px 0;
+  font-size: 1.1rem;
 }
 
-.retangulo {
-  width: 100px;
-  height: 150px;
-  background-color: darkgoldenrod;
-  margin-top: 42px;
-}
-
-.retangulo1 {
-  width: 100px;
-  height: 175px;
-  background-color: darkgoldenrod;
-}
-
-/* Seção: Acompanhe a galera jogando */
-.watch-gaming {
-  text-align: center;
-  margin: 50px 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.watch-gaming h2 {
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: 2px 2px 2px #000;
-  margin-bottom: 30px;
-}
-
-.watch-gaming .stream {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.watch-gaming .stream img {
-  width: 300px;
-  height: auto;
+.prize-amount {
+  background: #ffffff;
+  border: 2px solid #060606;
+  color: #1e821e;
+  font-weight: bold;
+  font-size: 1.15rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 6px 18px;
+  margin-top: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.067);
 }
 
-.stream-item {
+/* Grid de streams */
+.stream-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  justify-items: center;
+}
+
+.stream-card {
+  background: rgba(255,255,255,0.13);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #0002;
+  padding: 18px 12px 12px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin-bottom: 20px;
+  min-width: 180px;
+  max-width: 240px;
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  border: 2px solid #efb60033;
+}
+
+.stream-card img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.stream-card p {
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.stream-card .viewers {
+  color: #efb600;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+
+  .logo-header img {
+    height: 50px;
+    width: 60px;
+
+  }
+
+  .decorated-section {
+    max-width: 99vw;
+    padding: 18px 2vw 12px 2vw;
+  }
+  .games-grid, .prizes-grid, .stream-grid {
+    gap: 16px;
+  }
+  .game-card, .stream-card {
+    min-width: 120px;
+    max-width: 180px;
+    padding: 10px 6px 8px 6px;
+  }
+  .game-card img, .stream-card img {
+    max-width: 120px;
+  }
+  .prize-card {
+    min-width: 100px;
+    padding: 10px 8px;
+  }
+  .prize-card img {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 @media (max-width: 600px) {
-  .most-played .games img,
-  .watch-gaming .stream img {
-    width: 100px;
+  .decorated-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
   }
-  .top-prizes .prize img {
-    width: 60px;
+  .games-grid, .prizes-grid, .stream-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
-  .retangulo, .retangulo1 {
-    width: 60px;
-    font-size: 0.8rem;
+  .game-card, .stream-card {
+    min-width: 90vw;
+    max-width: 90vw;
+    padding: 8px 2vw 8px 2vw;
+  }
+  .game-card img, .stream-card img {
+    max-width: 90vw;
+  }
+  .prize-card {
+    min-width: 90vw;
+    padding: 8px 2vw;
+  }
+  .prize-card img {
+    width: 36px;
+    height: 36px;
   }
   .footer-container {
     flex-direction: column;
